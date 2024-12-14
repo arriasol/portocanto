@@ -1,0 +1,8 @@
+digest: a2c1798a
+name: dataset
+profile: '{"num_rows": 150, "num_elements": 450}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "categoria", "required": true},
+  {"type": "long", "name": "temps_pujada", "required": true}, {"type": "long", "name":
+  "temps_baixada", "required": true}]}'
+source: '{"uri": "./data/ciclistes.csv"}'
+source_type: local

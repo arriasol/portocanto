@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dockeria/volum/portcanto/mlruns/950492387117268113/adaa8c5a840546e4b782391047f2a446/artifacts
+end_time: 1734015333294
+entry_point_name: ''
+experiment_id: '950492387117268113'
+lifecycle_stage: active
+run_id: adaa8c5a840546e4b782391047f2a446
+run_name: blushing-stork-509
+run_uuid: adaa8c5a840546e4b782391047f2a446
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734015333143
+status: 3
+tags: []
+user_id: dockeria

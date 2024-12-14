@@ -1,0 +1,9 @@
+--- Informe General ---
+   temps_pujada  temps_baixada  label
+0      1.394439      -0.288644      3
+1     -1.324516       0.252139      2
+2      1.329877       0.392791      0
+3     -1.706350       1.452531      2
+4      0.975712      -0.215893      3
+--- Tipus de Clusters ---
+[{'name': 'BEBB', 'label': 1}, {'name': 'BEMB', 'label': 2}, {'name': 'MEBB', 'label': 3}, {'name': 'MEMB', 'label': 0}]

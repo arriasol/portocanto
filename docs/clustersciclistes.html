@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module clustersciclistes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>clustersciclistes</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/dockeria/volum/portcanto/clustersciclistes.py">/home/dockeria/volum/portcanto/clustersciclistes.py</a></font></td></tr></table>
+    <p><tt>Analitzem&nbsp;el&nbsp;comportament&nbsp;de&nbsp;ciclistes&nbsp;utilitzant&nbsp;clustering&nbsp;KMeans.<br>
+&nbsp;<br>
+Aquest&nbsp;script&nbsp;proporciona&nbsp;funcions&nbsp;per&nbsp;carregar&nbsp;dades,&nbsp;netejar-les,&nbsp;aplicar&nbsp;clustering,<br>
+i&nbsp;generar&nbsp;informes&nbsp;amb&nbsp;visualitzacions&nbsp;gràfiques.<br>
+&nbsp;<br>
+Llibreries&nbsp;requerides:<br>
+-&nbsp;os<br>
+-&nbsp;logging<br>
+-&nbsp;pickle<br>
+-&nbsp;pandas<br>
+-&nbsp;seaborn<br>
+-&nbsp;matplotlib<br>
+-&nbsp;sklearn</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="sklearn.preprocessing.html">sklearn.preprocessing</a><br>
+</td><td width="25%" valign=top><a href="seaborn.html">seaborn</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-associar_clusters_patrons"><strong>associar_clusters_patrons</strong></a>(tipus_cluster, model)</dt><dd><tt>Associa&nbsp;els&nbsp;etiquetatges&nbsp;dels&nbsp;clusters&nbsp;amb&nbsp;patrons&nbsp;de&nbsp;comportament.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tipus&nbsp;(llista&nbsp;de&nbsp;diccionaris):&nbsp;Tipus&nbsp;de&nbsp;comportaments&nbsp;a&nbsp;associar&nbsp;amb&nbsp;els&nbsp;clusters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;(KMeans):&nbsp;Model&nbsp;KMeans&nbsp;entrenat.<br>
+Return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;llista&nbsp;de&nbsp;diccionaris:&nbsp;Tipus&nbsp;actualitzats&nbsp;amb&nbsp;els&nbsp;etiquetatges&nbsp;de&nbsp;clusters.</tt></dd></dl>
+ <dl><dt><a name="-clean"><strong>clean</strong></a>(dataframe)</dt><dd><tt>Netegem&nbsp;el&nbsp;conjunt&nbsp;de&nbsp;dades&nbsp;eliminant&nbsp;columnes&nbsp;innecessàries.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;a&nbsp;netejar.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pandas.DataFrame:&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;netejat.<br>
+Exemple:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="#-clean">clean</a>(dataframe)</tt></dd></dl>
+ <dl><dt><a name="-clustering_kmeans"><strong>clustering_kmeans</strong></a>(data, n_clusters=4)</dt><dd><tt>Aplica&nbsp;el&nbsp;mètode&nbsp;de&nbsp;clustering&nbsp;KMeans&nbsp;sobre&nbsp;les&nbsp;dades.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(pandas.DataFrame):&nbsp;Dades&nbsp;d'entrada&nbsp;per&nbsp;al&nbsp;clustering.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;n_clusters&nbsp;(int):&nbsp;Nombre&nbsp;de&nbsp;clusters&nbsp;(per&nbsp;defecte&nbsp;4).<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;KMeans:&nbsp;Model&nbsp;KMeans&nbsp;entrenat.</tt></dd></dl>
+ <dl><dt><a name="-eda"><strong>eda</strong></a>(dataframe)</dt><dd><tt>Realitza&nbsp;una&nbsp;anàlisi&nbsp;exploratòria&nbsp;del&nbsp;conjunt&nbsp;de&nbsp;dades&nbsp;(EDA).<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;a&nbsp;analitzar.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cap</tt></dd></dl>
+ <dl><dt><a name="-extract_true_labels"><strong>extract_true_labels</strong></a>(dataframe)</dt><dd><tt>Extreu&nbsp;les&nbsp;etiquetes&nbsp;vertaderes&nbsp;(labels)&nbsp;del&nbsp;conjunt&nbsp;de&nbsp;dades.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;amb&nbsp;la&nbsp;columna&nbsp;'categoria'.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tupla:&nbsp;(numpy.ndarray&nbsp;de&nbsp;les&nbsp;etiquetes&nbsp;veritables,&nbsp;diccionari&nbsp;de&nbsp;categories&nbsp;a&nbsp;índex).<br>
+Excepcions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;KeyError:&nbsp;Si&nbsp;la&nbsp;columna&nbsp;'categoria'&nbsp;no&nbsp;existeix.<br>
+Exemple:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="#-extract_true_labels">extract_true_labels</a>(dataframe)</tt></dd></dl>
+ <dl><dt><a name="-generar_informes"><strong>generar_informes</strong></a>(data, tipus)</dt><dd><tt>Genera&nbsp;informes&nbsp;generals&nbsp;i&nbsp;específics&nbsp;per&nbsp;cada&nbsp;cluster.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(pandas.DataFrame):&nbsp;Dades&nbsp;amb&nbsp;les&nbsp;etiquetes&nbsp;dels&nbsp;clusters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tipus&nbsp;(llista&nbsp;de&nbsp;diccionaris):&nbsp;Tipus&nbsp;de&nbsp;clusters&nbsp;i&nbsp;etiquetes&nbsp;associades.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cap</tt></dd></dl>
+ <dl><dt><a name="-load_dataset"><strong>load_dataset</strong></a>(path)</dt><dd><tt>Carrega&nbsp;un&nbsp;conjunt&nbsp;de&nbsp;dades&nbsp;des&nbsp;d'un&nbsp;fitxer&nbsp;CSV&nbsp;a&nbsp;un&nbsp;DataFrame&nbsp;de&nbsp;pandas.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;(str):&nbsp;Ruta&nbsp;al&nbsp;fitxer&nbsp;CSV.<br>
+Return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pandas.DataFrame:&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;carregat.<br>
+Exemple:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="#-load_dataset">load_dataset</a>('data/ciclistes.csv')</tt></dd></dl>
+ <dl><dt><a name="-normalitzacio"><strong>normalitzacio</strong></a>(dataframe, escalar_model)</dt><dd><tt>Normalitzem&nbsp;el&nbsp;conjunt&nbsp;de&nbsp;dades&nbsp;utilitzant&nbsp;un&nbsp;escalador&nbsp;pre-entrenat.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;a&nbsp;normalitzar.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;escalar_model&nbsp;(preprocessing.StandardScaler):&nbsp;Escalador&nbsp;pre-entrenat.<br>
+Return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pandas.DataFrame:&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;normalitzat.</tt></dd></dl>
+ <dl><dt><a name="-predir_noves_dades"><strong>predir_noves_dades</strong></a>(noves_dades, scaler, model)</dt><dd><tt>Prediu&nbsp;les&nbsp;etiquetes&nbsp;dels&nbsp;clusters&nbsp;per&nbsp;noves&nbsp;dades.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;noves_dades&nbsp;(pandas.DataFrame):&nbsp;Noves&nbsp;dades&nbsp;a&nbsp;classificar.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scaler&nbsp;(preprocessing.StandardScaler):&nbsp;Escalador&nbsp;pre-entrenat.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;(KMeans):&nbsp;Model&nbsp;KMeans&nbsp;entrenat.<br>
+Retorna:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pandas.DataFrame:&nbsp;Noves&nbsp;dades&nbsp;amb&nbsp;etiquetes&nbsp;predites.</tt></dd></dl>
+ <dl><dt><a name="-suppress_stdout_stderr"><strong>suppress_stdout_stderr</strong></a>()</dt><dd><tt>Gestor&nbsp;de&nbsp;context&nbsp;per&nbsp;suprimir&nbsp;la&nbsp;sortida&nbsp;estàndard&nbsp;i&nbsp;d'error.<br>
+Utilitzem&nbsp;aquest&nbsp;gestor&nbsp;per&nbsp;evitar&nbsp;que&nbsp;es&nbsp;mostrin&nbsp;missatges&nbsp;a&nbsp;la&nbsp;consola<br>
+mentre&nbsp;s'executa&nbsp;una&nbsp;acció&nbsp;dins&nbsp;d'aquest&nbsp;context.</tt></dd></dl>
+ <dl><dt><a name="-visualitzar_clusters"><strong>visualitzar_clusters</strong></a>(data, labels)</dt><dd><tt>Visualitza&nbsp;els&nbsp;clusters&nbsp;amb&nbsp;colors&nbsp;diferents.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(pandas.DataFrame):&nbsp;Dades&nbsp;d'entrada.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;labels&nbsp;(llista&nbsp;o&nbsp;array):&nbsp;Etiquetes&nbsp;dels&nbsp;clusters.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cap</tt></dd></dl>
+ <dl><dt><a name="-visualitzar_pairplot"><strong>visualitzar_pairplot</strong></a>(dataframe)</dt><dd><tt>Genera&nbsp;un&nbsp;gràfic&nbsp;pairplot&nbsp;per&nbsp;visualitzar&nbsp;les&nbsp;correlacions&nbsp;entre&nbsp;atributs.<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;a&nbsp;visualitzar.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cap</tt></dd></dl>
+</td></tr></table>
+</body></html>

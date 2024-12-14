@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dockeria/volum/portcanto/mlruns/950492387117268113/291f3ae9330344418e20e3b00215cfe0/artifacts
+end_time: 1734015333728
+entry_point_name: ''
+experiment_id: '950492387117268113'
+lifecycle_stage: active
+run_id: 291f3ae9330344418e20e3b00215cfe0
+run_name: magnificent-cow-278
+run_uuid: 291f3ae9330344418e20e3b00215cfe0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734015333577
+status: 3
+tags: []
+user_id: dockeria

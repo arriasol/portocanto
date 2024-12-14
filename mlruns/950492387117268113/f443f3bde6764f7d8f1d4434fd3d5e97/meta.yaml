@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dockeria/volum/portcanto/mlruns/950492387117268113/f443f3bde6764f7d8f1d4434fd3d5e97/artifacts
+end_time: 1734015333125
+entry_point_name: ''
+experiment_id: '950492387117268113'
+lifecycle_stage: active
+run_id: f443f3bde6764f7d8f1d4434fd3d5e97
+run_name: bouncy-auk-494
+run_uuid: f443f3bde6764f7d8f1d4434fd3d5e97
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734015332961
+status: 3
+tags: []
+user_id: dockeria

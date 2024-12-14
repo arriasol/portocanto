@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dockeria/volum/portcanto/mlruns/950492387117268113/153f6d5f862d413b8d30259773316aad/artifacts
+end_time: 1734015333424
+entry_point_name: ''
+experiment_id: '950492387117268113'
+lifecycle_stage: active
+run_id: 153f6d5f862d413b8d30259773316aad
+run_name: caring-cod-976
+run_uuid: 153f6d5f862d413b8d30259773316aad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734015333310
+status: 3
+tags: []
+user_id: dockeria

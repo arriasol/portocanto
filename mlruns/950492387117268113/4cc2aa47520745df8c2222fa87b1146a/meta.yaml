@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dockeria/volum/portcanto/mlruns/950492387117268113/4cc2aa47520745df8c2222fa87b1146a/artifacts
+end_time: 1734015333556
+entry_point_name: ''
+experiment_id: '950492387117268113'
+lifecycle_stage: active
+run_id: 4cc2aa47520745df8c2222fa87b1146a
+run_name: stylish-wasp-827
+run_uuid: 4cc2aa47520745df8c2222fa87b1146a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734015333447
+status: 3
+tags: []
+user_id: dockeria
