@@ -105,9 +105,6 @@ $ python clustersciclistes.py
 
 S'obtenen 4 clústers.
 
-![Clusters](clusters.png)
-![Pairplot](pairplot.png)
-
 # Guardar_model <a name="pickle"></a>
 
 La biblioteca Pickle serveix per exportar models a un fitxer. Convertim l'objecte a bytes, 
