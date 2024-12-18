@@ -53,7 +53,7 @@ if __name__ == "__main__":
 	ciclistes_data = clean(ciclistes_data)
 	# ##########################################################################      
 	# Extreiem les etiquetes
-	# Aquí hem dona error: Value erroor : setting an array element with a
+	# Aquí hem dona error: Value error : setting an array element with a
 	# sequence the requested arrayt has inhomogeneus shape after 1 dimensions. 
 	# The deted shape was(2,) + inhomegeneous part.
 	# llavors he comprovat la funció def extract_true_labels(dataframe):
