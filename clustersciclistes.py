@@ -70,11 +70,11 @@ def clean(dataframe):
     return dataframe
 def extract_true_labels(dataframe):
     """
-    Extreu les etiquetes vertaderes (labels) del conjunt de dades.
+    Extreu les etiquetes de veritat (labels) del conjunt de dades.
     Arguments:
         dataframe(pandas.DataFrame): Conjunt de dades amb la columna 'categoria'.
     Returns:
-        tupla: (numpy.ndarray de les etiquetes veritables, diccionari de categories a índex).
+        tupla: (numpy.ndarray de les etiquetes de veritat, diccionari de categories a índex).
     Excepcions:
         KeyError: Si la columna 'categoria' no existeix.
     Exemple:
