@@ -58,7 +58,7 @@ $ docker run -dit -p 8888:8888 -p 5000:5000 --name ARRIASOLEAC6 -v ~/volum:/home
   * port 5000: Podem executar (inicialitzar) el servidor de MLflow.
 
 Accedir al contenidor
-$ docker exec -it portcanto /bin/bash
+$ docker exec -it ARRIASOLEAC6 /bin/bash
 
 i tot seguit instal·lar els mòduls necessaris:
 ```
