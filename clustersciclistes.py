@@ -40,7 +40,7 @@ def load_dataset(path):
     Return:
         pandas.DataFrame: Conjunt de dades carregat.
     Exemple:
-        >>> load_dataset('data/ciclistes.csv')
+        -  load_dataset('data/ciclistes.csv')
     """
     return pd.read_csv(path, delimiter=',')
 def eda(dataframe):
@@ -63,7 +63,7 @@ def clean(dataframe):
     Returns:
         pandas.DataFrame: Conjunt de dades netejat.
     Exemple:
-        >>> clean(dataframe)
+        -  clean(dataframe)
     """
     dataframe = dataframe.drop(['id', 'tt'], axis=1, errors='ignore')
     logging.debug('\nDataframe:\n%s\n...', dataframe.head(3))
@@ -78,7 +78,7 @@ def extract_true_labels(dataframe):
     Excepcions:
         KeyError: Si la columna 'categoria' no existeix.
     Exemple:
-        >>> extract_true_labels(dataframe)
+        -  extract_true_labels(dataframe)
     """
     if 'categoria' not in dataframe.columns:
         raise KeyError("Error: La columna 'categoria' no existeix. Reviseu les dades.")
