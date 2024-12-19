@@ -10,10 +10,8 @@
 ><td align=right valign=bottom
 ><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/dockeria/volum/portcanto/clustersciclistes.py">/home/dockeria/volum/portcanto/clustersciclistes.py</a></font></td></tr></table>
     <p><tt>Analitzem&nbsp;el&nbsp;comportament&nbsp;de&nbsp;ciclistes&nbsp;utilitzant&nbsp;clustering&nbsp;KMeans.<br>
-&nbsp;<br>
 Aquest&nbsp;script&nbsp;proporciona&nbsp;funcions&nbsp;per&nbsp;carregar&nbsp;dades,&nbsp;netejar-les,&nbsp;aplicar&nbsp;clustering,<br>
 i&nbsp;generar&nbsp;informes&nbsp;amb&nbsp;visualitzacions&nbsp;gràfiques.<br>
-&nbsp;<br>
 Llibreries&nbsp;requerides:<br>
 -&nbsp;os<br>
 -&nbsp;logging<br>
@@ -43,19 +41,19 @@ Llibreries&nbsp;requerides:<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-associar_clusters_patrons"><strong>associar_clusters_patrons</strong></a>(tipus_cluster, model)</dt><dd><tt>Associa&nbsp;els&nbsp;etiquetatges&nbsp;dels&nbsp;clusters&nbsp;amb&nbsp;patrons&nbsp;de&nbsp;comportament.<br>
+<td width="100%"><dl><dt><a name="-associar_clusters_patrons"><strong>associar_clusters_patrons</strong></a>(tipus_cluster, model)</dt><dd><tt>Associa&nbsp;les&nbsp;etiquetes&nbsp;dels&nbsp;clusters&nbsp;amb&nbsp;patrons&nbsp;de&nbsp;comportament.<br>
 Arguments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;tipus&nbsp;(llista&nbsp;de&nbsp;diccionaris):&nbsp;Tipus&nbsp;de&nbsp;comportaments&nbsp;a&nbsp;associar&nbsp;amb&nbsp;els&nbsp;clusters.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;(KMeans):&nbsp;Model&nbsp;KMeans&nbsp;entrenat.<br>
 Return:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;llista&nbsp;de&nbsp;diccionaris:&nbsp;Tipus&nbsp;actualitzats&nbsp;amb&nbsp;els&nbsp;etiquetatges&nbsp;de&nbsp;clusters.</tt></dd></dl>
+&nbsp;&nbsp;&nbsp;&nbsp;llista&nbsp;de&nbsp;diccionaris:&nbsp;Tipus&nbsp;actualitzats&nbsp;amb&nbsp;les&nbsp;etiquetes&nbsp;dels&nbsp;clusters.</tt></dd></dl>
  <dl><dt><a name="-clean"><strong>clean</strong></a>(dataframe)</dt><dd><tt>Netegem&nbsp;el&nbsp;conjunt&nbsp;de&nbsp;dades&nbsp;eliminant&nbsp;columnes&nbsp;innecessàries.<br>
 Arguments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;a&nbsp;netejar.<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;pandas.DataFrame:&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;netejat.<br>
 Exemple:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="#-clean">clean</a>(dataframe)</tt></dd></dl>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="#-clean">clean</a>(dataframe)</tt></dd></dl>
  <dl><dt><a name="-clustering_kmeans"><strong>clustering_kmeans</strong></a>(data, n_clusters=4)</dt><dd><tt>Aplica&nbsp;el&nbsp;mètode&nbsp;de&nbsp;clustering&nbsp;KMeans&nbsp;sobre&nbsp;les&nbsp;dades.<br>
 Arguments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(pandas.DataFrame):&nbsp;Dades&nbsp;d'entrada&nbsp;per&nbsp;al&nbsp;clustering.<br>
@@ -67,15 +65,15 @@ Arguments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;a&nbsp;analitzar.<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;cap</tt></dd></dl>
- <dl><dt><a name="-extract_true_labels"><strong>extract_true_labels</strong></a>(dataframe)</dt><dd><tt>Extreu&nbsp;les&nbsp;etiquetes&nbsp;vertaderes&nbsp;(labels)&nbsp;del&nbsp;conjunt&nbsp;de&nbsp;dades.<br>
+ <dl><dt><a name="-extract_true_labels"><strong>extract_true_labels</strong></a>(dataframe)</dt><dd><tt>Extreu&nbsp;les&nbsp;etiquetes&nbsp;de&nbsp;veritat&nbsp;(verdaderes)&nbsp;(labels)&nbsp;del&nbsp;conjunt&nbsp;de&nbsp;dades.<br>
 Arguments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;dataframe(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;amb&nbsp;la&nbsp;columna&nbsp;'categoria'.<br>
 Returns:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;tupla:&nbsp;(numpy.ndarray&nbsp;de&nbsp;les&nbsp;etiquetes&nbsp;veritables,&nbsp;diccionari&nbsp;de&nbsp;categories&nbsp;a&nbsp;índex).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tupla:&nbsp;(numpy.ndarray&nbsp;de&nbsp;les&nbsp;etiquetes&nbsp;de&nbsp;veritat&nbsp;(verdaderes),&nbsp;diccionari&nbsp;de&nbsp;categories&nbsp;a&nbsp;índex).<br>
 Excepcions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;KeyError:&nbsp;Si&nbsp;la&nbsp;columna&nbsp;'categoria'&nbsp;no&nbsp;existeix.<br>
 Exemple:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="#-extract_true_labels">extract_true_labels</a>(dataframe)</tt></dd></dl>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="#-extract_true_labels">extract_true_labels</a>(dataframe)</tt></dd></dl>
  <dl><dt><a name="-generar_informes"><strong>generar_informes</strong></a>(data, tipus)</dt><dd><tt>Genera&nbsp;informes&nbsp;generals&nbsp;i&nbsp;específics&nbsp;per&nbsp;cada&nbsp;cluster.<br>
 Arguments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(pandas.DataFrame):&nbsp;Dades&nbsp;amb&nbsp;les&nbsp;etiquetes&nbsp;dels&nbsp;clusters.<br>
@@ -88,7 +86,7 @@ Arguments:<br>
 Return:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;pandas.DataFrame:&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;carregat.<br>
 Exemple:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="#-load_dataset">load_dataset</a>('data/ciclistes.csv')</tt></dd></dl>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;<a href="#-load_dataset">load_dataset</a>('data/ciclistes.csv')</tt></dd></dl>
  <dl><dt><a name="-normalitzacio"><strong>normalitzacio</strong></a>(dataframe, escalar_model)</dt><dd><tt>Normalitzem&nbsp;el&nbsp;conjunt&nbsp;de&nbsp;dades&nbsp;utilitzant&nbsp;un&nbsp;escalador&nbsp;pre-entrenat.<br>
 Arguments:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pandas.DataFrame):&nbsp;Conjunt&nbsp;de&nbsp;dades&nbsp;a&nbsp;normalitzar.<br>
